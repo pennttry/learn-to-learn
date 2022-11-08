@@ -1,7 +1,3 @@
-* {
-  /* box-shadow: 0 0 2px red; */
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -11,19 +7,6 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-.header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  /* выше установили ограничения для секции */
-}
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
 }
 
 .two-columns {
@@ -140,7 +123,7 @@
   padding-top: 90px;
   padding-bottom: 90px;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
   box-sizing: border-box;
 }
 
@@ -219,9 +202,9 @@
 
 .feynman {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   height: 800px;
-  background-color: #e9e9e9;
+  background-color: #f2f2f2;
   padding-top: 100px;
   box-sizing: border-box;
 }
@@ -238,7 +221,7 @@
 .feynman__subtitle {
   text-align: center;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 20px;
   font-size: 36px;
   font-weight: 400;
   line-height: 51px;
@@ -262,4 +245,64 @@
   width: 867px;
   height: 637px;
   z-index: -1;
+}
+
+.header {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  height: 32px;
+  width: 228px;
+}
+
+.header__title {
+  width: 730px;
+  margin: 0;
+  margin-left: 64px;
+  font-size: 102px;
+  font-weight: 600;
+  line-height: 96px;
+}
+
+.header__subtitle {
+  width: 338px;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.header__main-illustration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 608px;
+  width: 765px;
+}
+
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  right: 0;
+  top: 64px;
 }
